@@ -925,6 +925,7 @@
 		E9F54F5E25802D5E0034795E /* InsulinType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F54F5D25802D5E0034795E /* InsulinType.swift */; };
 		E9F54FBA258052130034795E /* InsulinType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F54F5D25802D5E0034795E /* InsulinType.swift */; };
 		E9F54FC62581C50D0034795E /* ExpandableDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F54FC52581C50C0034795E /* ExpandableDatePicker.swift */; };
+		BDC8ED963FC9820498E1E8F9 /* PumpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432CF87220D774220066B889 /* PumpManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -4598,6 +4599,7 @@
 				A9E675E422713F4700E25293 /* HKQuantity.swift in Sources */,
 				A9BD318324F4548900994B83 /* Modelv3EntityMigrationPolicy.swift in Sources */,
 				D1A0B000000000000000000C /* ModelMappingv4v5Tov6Policy.swift in Sources */,
+				BDC8ED963FC9820498E1E8F9 /* PumpManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
