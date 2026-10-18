@@ -141,6 +141,10 @@ public protocol ExclusiveDeviceControl: DeviceConfigurationSharing {
     /// When the device last showed evidence that another controller used it. Default: nil.
     var lastForeignSessionAt: Date? { get }
 
+    /// Refuse commands after a foreign session when this controller has released the device.
+    /// The manager clears this when it explicitly takes control back. Default: unsupported.
+    var refusesForeignSessionsSince: Date? { get set }
+
     /// The next `takeControl()` has to find the device first, which may need the host awake.
     /// Default: false.
     var takeControlNeedsSearch: Bool { get }
@@ -158,6 +162,10 @@ public extension ExclusiveDeviceControl {
     func escalateTakeControl() -> String? { nil }
     func connectionDiagnostics() -> String? { nil }
     var lastForeignSessionAt: Date? { nil }
+    var refusesForeignSessionsSince: Date? {
+        get { nil }
+        set {}
+    }
     var takeControlNeedsSearch: Bool { false }
     static func takeControlNeedsSearch(adopting configuration: SharedDeviceConfiguration, localState: [String: Any]?) -> Bool { false }
     var hostRadioNeedsReset: Bool { false }
