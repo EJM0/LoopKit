@@ -297,4 +297,18 @@ public protocol PumpDeliveryOdometer {
 
     /// Read the pump now, bypassing any freshness shortcut. Completion: success.
     func refreshDeliveredUnits(completion: @escaping (Bool) -> Void)
+
+    /// How fast the pump delivers a bolus, in units per second: a recorded bolus is spread over that long.
+    var bolusDeliveryRate: Double { get }
+
+    /// The temp basal durations the pump takes, shortest first.
+    var supportedTempBasalDurations: [TimeInterval] { get }
+
+    /// What the pump has yet to deliver, as last read, of a bolus this controller doesn't track: another
+    /// controller's, started after the copy this one was set up from. 0 when none runs.
+    var untrackedBolusRemaining: Double { get }
+}
+
+extension PumpDeliveryOdometer {
+    public var untrackedBolusRemaining: Double { 0 }
 }
